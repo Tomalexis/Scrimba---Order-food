@@ -7,6 +7,7 @@ const summaryItems = document.getElementById('summary-items');
 const summaryTotal = document.getElementById('summary-total');
 const orderConfirm = document.getElementById('order-confirm');
 const payModal = document.getElementById('pay-modal');
+const closeBtn = document.getElementById('close-btn');
 
 let orderItems = [];
 
@@ -22,17 +23,31 @@ orderBtn.addEventListener('click', () => {
     payModal.style.display = 'block';
 })
 
+closeBtn.addEventListener('click', () => {
+    hideModal();
+})
+
+payModal.addEventListener('click', (e) => {
+    if (e.target === payModal) {
+        hideModal();
+    }
+})
+
 payModal.addEventListener('submit', (e) => {
     e.preventDefault();
     
     const nameValue = new FormData(e.target).get('name');
-    payModal.style.display = 'none';
+    hideModal();
     orderSummary.style.display = 'none';
     
     orderConfirm.innerHTML = `<h2>Thanks ${nameValue} ! Your order is on its way!</h2>`
     orderConfirm.style.display = 'block';
     
 })
+
+function hideModal() {
+    payModal.style.display = 'none';
+}
 
 function displayMenu(items) {
     let itemHtml = items.map((item) => {
@@ -71,8 +86,6 @@ function removeItemFromOrder(itemId) {
         return el.id !== parseInt(itemId)
     })
     
-    console.log('order', orderItems);
-    
     if(orderItems.length === 0) {
         orderSummary.style.display = 'none';
         summaryTotal.style.display = 'none';
@@ -103,17 +116,5 @@ function displayOrder(items) {
     summaryTotal.innerHTML = totalHtml
     summaryItems.innerHTML = itemHtml
 }
-
-/* 
-1 - Ajouter item dans orderItems au click du bouton avec data-attribute
-2 - Si orderItems pas vide: display la section order-summary et inversement
-4 - Enlever l'item de orderItems si on click sur remove
-3 - Utiliser reduce pour calculer le total
-
-<div class="summary-item total">
-                    <h3>Total price:</h3>
-                    <h3>$${item.price}</h3>
-                </div>
-*/
 
 displayMenu(menuArray);
