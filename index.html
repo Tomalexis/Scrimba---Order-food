@@ -1,0 +1,43 @@
+<html>
+    <head>
+       <link rel="stylesheet" href="index.css">
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Lully's dinner</h1>
+            <p>The best burgers and pizzas in town.</p>
+        </header>
+        <main>
+            <section id="menu">
+                <ul id="menu-items">
+                </ul>
+            </section>
+            <section id="order-summary">
+                <h2>Your order</h2>
+                <ul id="summary-items">
+                </ul>
+                <div id="summary-total" class="summary-item total">
+                </div>
+                <button id="order-btn" class="confirm-btn">Complete order</button>
+            </section>
+            <section id="order-confirm">
+            </section>
+            <form id="pay-modal" class="modal">
+                <div class="modal-content">
+                    <h2>Enter card details</h2>
+                    <div class="form-inputs">
+                        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                        <input type="number" name="card" id="card" placeholder="Enter card number" required>
+                        <input type="number" name="cvv" id="cvv" placeholder="Enter CVV" required>
+                    </div>
+                    <input type="submit" id="pay-btn" class="confirm-btn" value="Pay">
+                </div>
+            </form>
+        </main>
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+

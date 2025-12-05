@@ -1,0 +1,134 @@
+body {
+    margin: 0 auto;
+    width: 600px;
+    font-family: 'Smythe';
+}
+
+header {
+    background-image: url('images/banner.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+    padding: 25px;
+}
+
+main {
+    padding: 16px;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #D2D2D2;
+    margin: 20px 0;
+}
+
+.item {
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+.item-infos h2, .item-infos p {
+    margin: 0;
+}
+
+.item-icon {
+    font-size: 50px;
+}
+
+.add-btn {
+    border: 1px solid #DEDEDE;
+    border-radius: 50%;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+}
+
+.remove-btn {
+    background-color: white;
+    border: none;
+    color: #8B8B8B;
+    font-size: 12px;
+}
+
+#order-summary {
+    display: none;
+}
+
+#order-summary h2 {
+    justify-self: center;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total {
+    border-top: 3px solid black;
+}
+
+.confirm-btn {
+    display: block;
+    margin: 0 auto;
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: #16DB99;
+    border-radius: 3px;
+    border: none;
+    width: 80%;
+    height: 60px;
+}
+
+.modal {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: white;
+    width: 50%;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 34px;
+}
+
+input {
+    padding: 16px;
+}
+
+#order-confirm {
+    display: none;
+    background-color: #ECFDF5;
+    text-align: center;
+    padding: 30px;
+}
+
+#order-confirm h2 {
+    color: #065F46;
+}
