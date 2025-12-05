@@ -62,6 +62,17 @@ ul {
     font-size: 12px;
 }
 
+.modal-top {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#close-btn {
+    background-color: white;
+    border: 1px solid #DEDEDE;
+    border-radius: 50%;
+}
+
 #order-summary {
     display: none;
 }
